@@ -1,4 +1,5 @@
 import users.user as model
+import notes.actions
 
 class Actions:
 
@@ -47,17 +48,18 @@ class Actions:
               """)
         
         action = input("What do you want to do?: ")
+        doThe = notes.actions.Actions()
 
         if action == "create":
-            print("Let's create")
+            doThe.create(user)
             self.nextActions(user)
 
         elif action == "show":
-            print("Let's show")
+            doThe.show(user)
             self.nextActions(user)
 
         elif action == "delete":
-            print("Let's delete")
+            doThe.delete(user)
             self.nextActions(user)
 
         elif action == "exit":
