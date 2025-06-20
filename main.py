@@ -1,20 +1,18 @@
+from users import actions
+
 print("""
 Available actions:
       _ register
       _ login
       """)
 
+user = actions.Actions()
+
 action =input("What do you want to do?: ")
 
 if action == "register":
-    print("\nOk. Let's register you in the system.")
+    user.register()
 
-    name = input("What's your name?: ")
-    last_names = input("What are your last names?: ")
-    email = input("Enter your email: ")
-    password = input("Enter your password: ")
 
 elif action == "login":
-    print("Okay!! Log in to the system")
-    email = input("Enter your email: ")
-    password = input("Enter your password: ")
+    user.login()
